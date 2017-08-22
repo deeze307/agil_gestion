@@ -1,0 +1,1 @@
+app.controller("empleoCategoriaController",function(o,l,r){console.log("controlador cargado.")});
