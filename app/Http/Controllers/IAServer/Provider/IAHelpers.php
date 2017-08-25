@@ -102,9 +102,22 @@ function hasRole($role)
     }
 }
 
+// Si es un administrador del sistema
 function isAdmin()
 {
     return hasRole('admin');
+}
+
+// Si es un operador de caja
+function isOper()
+{
+    return hasRole('operator');
+}
+
+// Si es un usuario de nivel alto (El que paga el sistema)
+function isOwner()
+{
+    return hasRole('owner');
 }
 
 function currency($number)

@@ -4,7 +4,7 @@ require('Controllers/IAServer/routes.php');
 require('Controllers/Email/routes.php');
 
 //AgilGestion
-require('Controllers/Almacen/routes.php');
+require('Controllers/Deposito/routes.php');
 require('Controllers/Clientes/routes.php');
 require('Controllers/Empleados/routes.php');
 require('Controllers/Facturacion/routes.php');
