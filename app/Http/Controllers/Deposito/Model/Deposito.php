@@ -1,6 +1,6 @@
 <?php
 
-namespace IAServer\Http\Controllers\IAServer\Model;
+namespace IAServer\Http\Controllers\Deposito\Model;
 
 use Illuminate\Database\Eloquent\Model;
 

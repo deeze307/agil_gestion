@@ -12,6 +12,7 @@ class DepositoController extends Controller
     public static function depositoAll()
     {
         $deposito = new ABMDeposito();
-        return $deposito->getDepositoAll();
+        $datos = $deposito->getDepositoAll();
+        return compact('deposito.index','datos');
     }
 }
