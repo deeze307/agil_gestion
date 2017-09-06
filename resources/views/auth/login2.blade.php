@@ -32,7 +32,7 @@
   <div class="login-box login-sidebar">
     <div class="white-box">
       <form class="form-horizontal form-material" id="loginform" action="{{ route('iaserver.atlogin') }}" method="POST">
-        <a href="javascript:void(0)" class="text-center db">{!! AGimg('ampleadmin/img/agilgestion-dark.png','dark-logo') !!}</a>
+        <a href="javascript:void(0)" class="text-center db">{!! AGimg('ampleadmin/img/agilgestion-dark.png','home','dark-logo') !!}</a>
         
         <div class="form-group m-t-40">
           <div class="col-xs-12">

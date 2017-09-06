@@ -702,6 +702,7 @@ return array(
     'IAServer\\Http\\Controllers\\IAServer\\IAServerController' => $baseDir . '/app/Http/Controllers/IAServer/IAServerController.php',
     'IAServer\\Http\\Controllers\\IAServer\\Model\\Menu' => $baseDir . '/app/Http/Controllers/IAServer/Model/Menu.php',
     'IAServer\\Http\\Controllers\\IAServer\\Util' => $baseDir . '/app/Http/Controllers/IAServer/Util.php',
+    'IAServer\\Http\\Controllers\\Proveedores\\Abm\\CRUDProveedores' => $baseDir . '/app/Http/Controllers/Proveedores/Abm/CRUDProveedores.php',
     'IAServer\\Http\\Controllers\\Proveedores\\Model\\Proveedores' => $baseDir . '/app/Http/Controllers/Proveedores/Model/Proveedores.php',
     'IAServer\\Http\\Controllers\\Proveedores\\ProveedoresController' => $baseDir . '/app/Http/Controllers/Proveedores/ProveedoresController.php',
     'IAServer\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

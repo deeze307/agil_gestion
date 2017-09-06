@@ -14,19 +14,23 @@ function AGTheme($path)
     return '<link href="'.asset($path).'" media="all" rel="stylesheet" id="theme" type="text/css" />';
 }
 
-function AGimg($path,$type)
+function AGimg($path,$alt,$type)
 {
     if($type =='user')
     {
-        return '<img src="'.asset($path).'" alt="user" />';
+        return '<img src="'.asset($path).'" alt="'.$type.'" />';
     }
     elseif($type == 'user-img')
     {
-        return '<img src="'.asset($path).'" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">'.Auth::user()->name.'</b><span class="caret"></span>';
+        return '<img src="'.asset($path).'" alt="'.$type.'" width="36" class="img-circle"><b class="hidden-xs">'.Auth::user()->name.'</b><span class="caret"></span>';
+    }
+    elseif($type == 'alert')
+    {
+        return '<img src="'.asset($path).'" alt="'.$alt.'" class="img-responsive model_img" id="sa-warning">';
     }
     else
     {
-        return '<img src="'.asset($path).'" alt="home" class="'.$type.'" />';
+        return '<img src="'.asset($path).'" alt="'.$alt.'" class="'.$type.'" />';
     }
 
 }

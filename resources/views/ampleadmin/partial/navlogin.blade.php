@@ -18,21 +18,25 @@ catch (Exception $ex)
 <ul class="nav navbar-top-links navbar-right pull-right">
       <li class="dropdown">
           <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#">
-            {!! AGimg('ampleadmin/img/user.png','user-img') !!}
+            @if ($user->profile->avatar != "")
+                {!! AGimg('ampleadmin/img/users/'.$user->profile->avatar,'home','user-img') !!}
+            @else
+                {!! AGimg('ampleadmin/img/user.png','home','user-img') !!}
+            @endif
           </a>
           <ul class="dropdown-menu dropdown-user animated flipInY">
               <li>
                   <div class="dw-user-box">
                   <div class="u-img">
-                  {!! AGimg('ampleadmin/img/users/{{$user->profile->avatar}}','user') !!}
+                      @if ($user->profile->avatar != "")
+                          {!! AGimg('ampleadmin/img/users/'.$user->profile->avatar,'home','user') !!}
+                      @else
+                          {!! AGimg('ampleadmin/img/user.png','home','user') !!}
+                      @endif
                   </div>
                       <div class="u-text">
                           <h4>
-                              @if ($user->hasProfile())
-                                  {{ $user->profile->fullname() }}
-                              @else
-                                  {{ $user->name }}
-                              @endif
+                              {{ $user->profile->fullname() }}
                           </h4>
                           <p class="text-muted">{{$user->profile->email}}</p>
                       </div>

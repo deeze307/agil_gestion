@@ -1056,6 +1056,7 @@ class ComposerStaticInite48db76c4ac726055eedaacbcfee3deb
         'IAServer\\Http\\Controllers\\IAServer\\IAServerController' => __DIR__ . '/../..' . '/app/Http/Controllers/IAServer/IAServerController.php',
         'IAServer\\Http\\Controllers\\IAServer\\Model\\Menu' => __DIR__ . '/../..' . '/app/Http/Controllers/IAServer/Model/Menu.php',
         'IAServer\\Http\\Controllers\\IAServer\\Util' => __DIR__ . '/../..' . '/app/Http/Controllers/IAServer/Util.php',
+        'IAServer\\Http\\Controllers\\Proveedores\\Abm\\CRUDProveedores' => __DIR__ . '/../..' . '/app/Http/Controllers/Proveedores/Abm/CRUDProveedores.php',
         'IAServer\\Http\\Controllers\\Proveedores\\Model\\Proveedores' => __DIR__ . '/../..' . '/app/Http/Controllers/Proveedores/Model/Proveedores.php',
         'IAServer\\Http\\Controllers\\Proveedores\\ProveedoresController' => __DIR__ . '/../..' . '/app/Http/Controllers/Proveedores/ProveedoresController.php',
         'IAServer\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-@if ($__env->yieldContent('ng'))
+{{--@if ($__env->yieldContent('ng'))--}}
   <html lang="en" ng-app="@yield('ng')">
-@else
-  <html lang="en" ng-app="">
-@endif
+{{--@else--}}
+  {{--<html lang="en" ng-app="">--}}
+{{--@endif--}}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,6 +45,7 @@
     {!! IAStyle('ampleadmin/plugins/sidebar-nav/dist/sidebar-nav.min.css') !!}
     {!! IAStyle('ampleadmin/css/animate.css') !!}
     {!! IAStyle('ampleadmin/css/spinners.css') !!}
+    {!! IAStyle('ampleadmin/plugins/sweetalert/sweetalert.css') !!}
     {!! IAStyle('ampleadmin/css/style.css') !!}
     {!! AGTheme('ampleadmin/css/colors/purple-dark.css') !!}
 
@@ -97,9 +98,9 @@
                         <!-- Logo text image you can use text also -->
                         <span class="hidden-xs">
                             <!--This is dark logo text-->
-                            {!! AGimg('ampleadmin/img/agilgestion.png','dark-logo') !!}
+                            {!! AGimg('ampleadmin/img/agilgestion.png','home','dark-logo') !!}
                           <!--This is light logo text-->
-                            {!! AGimg('ampleadmin/img/agilgestion.png','light-logo') !!}
+                            {!! AGimg('ampleadmin/img/agilgestion.png','home','light-logo') !!}
                         </span>
                     </a>
                 </div>
@@ -117,6 +118,8 @@
 
       <!-- Content Wrapper. Contains page content -->
       {{--<div class="content-wrapper">--}}
+        <!-- !!! CORE !!! -->
+        {!! IAScript('vendor/agil_gestion/agil_gestion.js') !!}
         <section class="content">
             {{--<div class="box">--}}
                 {{--<div class="box-body" id="ltebody">--}}
@@ -143,6 +146,8 @@
     {!! IAScript('ampleadmin/plugins/sidebar-nav/dist/sidebar-nav.min.js') !!}
     {!! IAScript('ampleadmin/js/jquery.slimscroll.js') !!}
     {!! IAScript('ampleadmin/js/waves.js') !!}
+    {!! IAScript('ampleadmin/plugins/sweetalert/sweetalert.min.js') !!}
+    {!! IAScript('ampleadmin/plugins/sweetalert/jquery.sweet-alert.custom.js') !!}
     {!! IAScript('ampleadmin/js/custom.min.js') !!}
     {!! IAScript('ampleadmin/plugins/styleswitcher/jQuery.style.switcher.js') !!}
 
@@ -152,8 +157,11 @@
     {!! IAStyle('ampleadmin/plugins/iCheck/all.css') !!}
     {!! IAScript('ampleadmin/plugins/iCheck/icheck.min.js') !!}
 
+
             <!-- Select2 -->
     {!! IAScript('ampleadmin/plugins/select2/select2.full.min.js') !!}
+
+
 
 
 
