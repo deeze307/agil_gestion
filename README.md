@@ -1,11 +1,12 @@
 # Agil Gestión
 
 ## Descripción
-Agil Gestión es un sistema de control de facturación y stock de productos.
+Agil Gestión es un sistema de Control de Facturación y Stock de Productos. El sistema le permitirá gestionar su comercio desde su oficina o desde su casa a cualquier hora.
+Administre sus empleados, proveedores y su stock de productos donde y cuando quiera.
 
 ## Características
 
-|  | Paquete Standard | Paquete Extendido | Paquete Full
+|  | Standard | Gold | Black
 |----------|----------|----------|----------|
 |**Sesion de usuario con llave de pago**|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|
 |**Control de Stock con Ubicaciones**|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|
@@ -17,3 +18,26 @@ Agil Gestión es un sistema de control de facturación y stock de productos.
 |**Impresión de Ticket/Remito**|<p align="center">:x:</p>|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|
 |**Reporte de Ventas por rango de fecha**|<p align="center">:x:</p>|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|
 |**Estadísticas**|<p align="center">:x:</p>|<p align="center">:x:</p>|<p align="center">:white_check_mark:</p>|
+---
+## Derecho de llave
+Por única vez se abonará una suma de dinero dependiendo del paquete contratado para obtener ingreso a la plataforma.
+
+* Paquete Standard: _$1800_
+* Paquete Gold: _$2300_
+* Paquete Black: _$2800_
+
+Esta suma puede abonarse en efectivo o con tarjetas Visa, Master o American Express hasta 3 pagos sin interés.
+
+---
+## Mantenimiento
+
+Mensualmente, se deberán abonar _$500_ por costos de mantenimiento de la cuenta.
+Estos costos de mantenimiento incluyen:
+
+* Soporte Técnico
+* Actualizaciónes Permanentes
+* Resguardo de información diariamente
+
+---
+
+El sistema está sujeto a constantes mejoras e implementaciones por lo que usted podrá solicitar módulos personalizados que se ajusten a sus necesidades.
