@@ -31,7 +31,7 @@ Route::group(['prefix' => 'auth'], function() {
 
 // ABM
 Route::resource('/abm', 'IAServer\Abm\AbmController');
-Route::get('/abm/print/credencial/{userId}', ['as' =>'iaserver.abm.print.credencial', 'uses' => 'IAServer\Abm\IAServerCredencial@zebraPrint']);
+//Route::get('/abm/print/credencial/{userId}', ['as' =>'iaserver.abm.print.credencial', 'uses' => 'IAServer\Abm\IAServerCredencial@zebraPrint']);
 
 // Custom Profile
 //Route::post('/profile/search', function() {

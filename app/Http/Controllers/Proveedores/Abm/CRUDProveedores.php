@@ -8,17 +8,46 @@ use Illuminate\Http\Request;
 
 use IAServer\Http\Requests;
 use IAServer\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Log;
+use Mockery\CountValidator\Exception;
 
 class CRUDProveedores extends ProveedoresController
 {
-    public static function getProveedoresAll($owner_user_id)
+    public static function index()
     {
-        return Proveedores::where('id_owner',$owner_user_id)->get();
+        $user = Auth::user();
+        return Proveedores::where('id_owner',$user->profile->owner())->get();
+
     }
 
-    public static function create($proveedor)
+    public static function create(Request $request)
     {
+        try
+        {
+            $req = $request->all();
+            $user = Auth::user();
+            $proveedores = new Proveedores();
+            $proveedores->nombre = $req['nombre'];
+            $proveedores->apellido = $req['apellido'];
+            $proveedores->nombre_fantasia = $req['nombre_fantasia'];
+            $proveedores->direccion = $req['direccion'];
+            $proveedores->localidad = $req['localidad'];
+            $proveedores->telefono = $req['telefono'];
+            $proveedores->id_categoria = $req['id_categoria'];
+            $proveedores->id_owner = $user->profile->owner();
+            $proveedores->save();
 
+            Cookie::queue(Cookie::make('proveedorCreado','Exito',1, null, null, null, false));
+            return redirect('proveedores');
+
+        }
+        catch(Exception $ex)
+        {
+            Cookie::queue(Cookie::make('proveedorCreado','Error',1, null, null, null, false));
+            return redirect('proveedores/index');
+        }
     }
 
     public static function show($id)
@@ -33,9 +62,24 @@ class CRUDProveedores extends ProveedoresController
         $proveedor->apellido = $upd->apellido;
     }
 
-    public static function destroy($id)
+    public static function edit()
     {
-        Proveedores::destroy($id);
 
     }
+
+    public static function destroy($id)
+    {
+        try
+        {
+            Proveedores::destroy($id);
+            return 'ok';
+        }
+        catch(Exception $ex)
+        {
+            return 'error';
+        }
+
+    }
+
+
 }

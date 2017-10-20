@@ -25,7 +25,7 @@
             <!-- Shortcut -->
     {!! IAScript('assets/jquery/shortcut.js') !!}
             <!-- Cookies -->
-    {!! IAScript('assets/jquery/cookies/cookies.js') !!}
+    {{--{!! IAScript('assets/jquery/cookies/cookies.js') !!}--}}
             <!-- AngularJS-->
     {!! IAStyle('assets/angularjs/loading-bar.css') !!}
     {!! IAScript('assets/angularjs/angular.min.js') !!}
@@ -63,6 +63,8 @@
     {!! IAStyle('assets/jquery/daterangepicker/daterangepicker.css') !!}
             <!-- Angular DataTables -->
     {!! IAScript('assets/angular-datatables/angular-datatables.min.js') !!}
+    {!! IAScript('assets/angularjs/angular-cookies.min.js') !!}
+
     <script>
         function remoteLink(uri) {
             document.getElementById("ltebody").innerHTML='<object type="text/html" data="'+uri+'"  width="100%" height="2000"></object>';
@@ -160,7 +162,6 @@
 
             <!-- Select2 -->
     {!! IAScript('ampleadmin/plugins/select2/select2.full.min.js') !!}
-
 
 
 

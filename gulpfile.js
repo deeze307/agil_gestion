@@ -33,16 +33,16 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.scriptsIn("public/assets/angularjs/common");
 
-    //Sistema
+    //  CONFIG
     mix.scriptsIn(
-        "resources/views/agil_gestion/assets/js",
+        "resources/views/agil_gestion//assets/js",
         "public/vendor/agil_gestion/agil_gestion.js"
     );
 
-    // Proveedores
+    //  PROVEEDORES
     mix.scriptsIn(
         "resources/views/proveedores/assets/js",
-        "public/vendor/proveedores/proveedores.js"
+        "public/vendor/agil_gestion/proveedores.js"
     );
 });
 

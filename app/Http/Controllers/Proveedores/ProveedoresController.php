@@ -15,10 +15,11 @@ class ProveedoresController extends Controller
 
     public static function index()
     {
-        $user = Auth::user();
-        $deposito = new CRUDProveedores();
-        $datos = $deposito->getProveedoresAll($user->profile->owner_user_id);
-        $output = compact('datos');
-        return view('proveedores.index',$output);
+        return view('proveedores.index');
+    }
+
+    public static function prompt()
+    {
+        return view('proveedores.common.prompt');
     }
 }

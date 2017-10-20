@@ -17,4 +17,8 @@ class Profile extends Model
     public function email() {
         return $this->email;
     }
+
+    public function owner() {
+        return $this->owner_user_id;
+    }
 }

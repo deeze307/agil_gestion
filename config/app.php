@@ -136,6 +136,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
@@ -149,6 +150,7 @@ return [
         Collective\Bus\BusServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 //        Barryvdh\Debugbar\ServiceProvider::class
     ],
 
@@ -199,8 +201,11 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-		'SoapWrapper' => Artisaninweb\SoapWrapper\Facades\SoapWrapper::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class
+		'SoapWrapper'=> Artisaninweb\SoapWrapper\Facades\SoapWrapper::class,
+        'Excel'     => Maatwebsite\Excel\Facades\Excel::class,
+
+        'Form'      => Collective\Html\FormFecade::class,
+        'Html'      => Collective\Html\HtmlFecade::class
 //        'Debugbar' => Barryvdh\Debugbar\Facade::class
 
         

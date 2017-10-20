@@ -1,5 +1,6 @@
 <?php
 // Usar la estructura de groups con prefix para definir las rutas.
+
 Route::group([
     'prefix'=>'proveedores',
     'namespace'=>'Proveedores'
@@ -10,7 +11,12 @@ Route::group([
         'uses'=>'ProveedoresController@index'
     ]);
 
-    Route::get('/all','ProveedoresController@proveedoresAll');
+    //CRUD
+
+
+    Route::get('/prompt','ProveedoresController@prompt');
 });
 
+//  **** CRUD ****
+require('Abm/routes.php');
 

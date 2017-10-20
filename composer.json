@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "AgilGestion",
+    "description": "Agil Gestión.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
@@ -12,6 +12,7 @@
         "vinkla/hashids": "^2.2",
         "maatwebsite/excel": "~2.1.0",
         "laravelcollective/bus": "^5.2",
+        "laravelcollective/html": "^5.2",
 		"arcanedev/log-viewer": "~3.0"
     },
     "require-dev": {
