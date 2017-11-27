@@ -11,7 +11,7 @@ app.controller("proveedoresController",["$scope","$rootScope","$http","Factory",
                 confirmButtonColor:'#DD6B55'
             };
             AgCore.successSweetAlert({options:_options});
-            $cookies.remove("proveedorCreado");
+            //$cookies.remove("proveedorCreado");
         }else if(Cookie == 'Error'){
             var _options = {
                 text:'Ocurrió un error al intentar crear el Proveedor',
@@ -26,12 +26,14 @@ app.controller("proveedoresController",["$scope","$rootScope","$http","Factory",
 
         $scope.btnClick = function(route, title, type,proveedor,add){
             if (add == true){
+                //Esto quiere decir que estoy agregando un proveedor
                 $scope.proveedor = "";
                 //$scope.datos_apellido = "";
                 //$scope.datos_correo = "";
                 $scope._addProvider = true;
             }else{
                 $scope.proveedor = proveedor;
+                //Esto quiere decir que no estoy agregando un proveedor si no que lo estoy editando/
                 //$scope.datos_apellido = datos.apellido;
                 //$scope.datos_correo = datos.correo;
                 $scope._addProvider = false;
@@ -75,7 +77,7 @@ app.controller("proveedoresController",["$scope","$rootScope","$http","Factory",
                 closeOnConfirm : false,
                 closeOnCancel : false,
                 actionConfirmTitle : "Eliminado!",
-                actionConfirmText : proveedor.nombre_fantasia+" ha sido eliminado.",
+                actionConfirmText : proveedor.nombre_fantasia+" ha sido eliminado. En unos instantes de actualizará la lista.",
                 actionConfirmRoute : "proveedores/destroy/"+proveedor.id,
                 actionConfirmType : "success",
                 actionCancelTitle : "Cancelado",
