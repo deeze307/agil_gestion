@@ -27,6 +27,7 @@ class CRUDProveedores extends ProveedoresController
             'proveedores.localidad',
             'proveedores.telefono',
             'proveedores.id_categoria',
+            'proveedores.cuit',
             'pc.nombre as nombre_categoria',
             'proveedores.id_owner')
             ->join('agil_gestion_proveedores.proveedores_categorias as pc','proveedores.id_categoria','=','pc.id')
@@ -49,6 +50,7 @@ class CRUDProveedores extends ProveedoresController
             $proveedores->localidad = $req['localidad'];
             $proveedores->telefono = $req['telefono'];
             $proveedores->id_categoria = $req['id_categoria'];
+            $proveedores->cuit = $req['cuit'];
             $proveedores->id_owner = $user->profile->owner();
             $proveedores->save();
 
@@ -68,17 +70,25 @@ class CRUDProveedores extends ProveedoresController
         return Proveedores::find($id)->get();
     }
 
-    public static function update($upd)
+    public static function update(Request $upd)
     {
-        $proveedor = Proveedores::find($upd->id)->get();
-        $proveedor->nombre = $upd->nombre;
-        $proveedor->apellido = $upd->apellido;
-        $proveedor->nombre_fantasia = $upd->nombre_fantasia;
-        $proveedor->direccion = $upd->direccion;
-        $proveedor->localidad = $upd->localidad;
-        $proveedor->telefono = $upd->telefono;
-        $proveedor->id_categoria = $upd->id_categoria;
-        $proveedor->save();
+        try{
+            $proveedor = Proveedores::find($upd->id);
+            $proveedor->nombre = $upd->nombre;
+            $proveedor->apellido = $upd->apellido;
+            $proveedor->nombre_fantasia = $upd->nombre_fantasia;
+            $proveedor->direccion = $upd->direccion;
+            $proveedor->localidad = $upd->localidad;
+            $proveedor->telefono = $upd->telefono;
+            $proveedor->id_categoria = $upd->id_categoria;
+            $proveedor->cuit = $upd->cuit;
+            $proveedor->save();
+
+            return 'success';
+        }
+        catch (Exception $ex){
+            return $ex->getMessage();
+        }
     }
 
     public static function edit()

@@ -9,7 +9,7 @@ Route::group([
 
     Route::post('/create','CRUDProveedores@create');
 
-    Route::get('/update','CRUDProveedores@update');
+    Route::post('/update','CRUDProveedores@update');
 
     Route::get('/show','CRUDProveedores@show');
 

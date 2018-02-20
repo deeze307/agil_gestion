@@ -749,6 +749,7 @@ return array(
     'IAServer\\Http\\Controllers\\IAServer\\Util' => $baseDir . '/app/Http/Controllers/IAServer/Util.php',
     'IAServer\\Http\\Controllers\\Proveedores\\Abm\\CRUDProveedores' => $baseDir . '/app/Http/Controllers/Proveedores/Abm/CRUDProveedores.php',
     'IAServer\\Http\\Controllers\\Proveedores\\Model\\Proveedores' => $baseDir . '/app/Http/Controllers/Proveedores/Model/Proveedores.php',
+    'IAServer\\Http\\Controllers\\Proveedores\\Model\\ProveedoresCategorias' => $baseDir . '/app/Http/Controllers/Proveedores/Model/ProveedoresCategorias.php',
     'IAServer\\Http\\Controllers\\Proveedores\\ProveedoresController' => $baseDir . '/app/Http/Controllers/Proveedores/ProveedoresController.php',
     'IAServer\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'IAServer\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

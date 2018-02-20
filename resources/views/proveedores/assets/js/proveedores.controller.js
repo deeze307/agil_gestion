@@ -1,5 +1,5 @@
-app.controller("proveedoresController",["$scope","$rootScope","$http","Factory","$log","$route","AgCore","$window","$cookies",
-    function($scope,$rootScope,$http,Factory,$log,$route,AgCore,$window,$cookies){
+app.controller("proveedoresController",["$scope","$rootScope","$http","ProviderFactory","$log","$route","AgCore","$window","$cookies",
+    function($scope,$rootScope,$http,ProviderFactory,$log,$route,AgCore,$window,$cookies){
 
         var Cookie = $cookies.proveedorCreado;
         $log.log('estado '+Cookie);
@@ -28,19 +28,16 @@ app.controller("proveedoresController",["$scope","$rootScope","$http","Factory",
             if (add == true){
                 //Esto quiere decir que estoy agregando un proveedor
                 $scope.proveedor = "";
-                //$scope.datos_apellido = "";
-                //$scope.datos_correo = "";
                 $scope._addProvider = true;
             }else{
                 $scope.proveedor = proveedor;
-                //Esto quiere decir que no estoy agregando un proveedor si no que lo estoy editando/
+                //Esto quiere decir que no estoy agregando un proveedor si no que lo estoy editando
                 //$scope.datos_apellido = datos.apellido;
                 //$scope.datos_correo = datos.correo;
                 $scope._addProvider = false;
             }
             $scope.openModal(route,title,type);
         };
-
 
 
         $scope.openModal = function(route, title, type) {
@@ -62,6 +59,7 @@ app.controller("proveedoresController",["$scope","$rootScope","$http","Factory",
         });
 
         $scope.closeModal = function(){
+            $scope.proveedor = {};
             elmodal.dialog.close();
         };
 
@@ -94,8 +92,32 @@ app.controller("proveedoresController",["$scope","$rootScope","$http","Factory",
         };
 
         function requestAllProviders(){
-            Factory.requestAll().then(function(response){
+            ProviderFactory.requestAll().then(function(response){
                 $scope.proveedores = response.data;
+            });
+        }
+
+        $scope.updateProvider = function (proveedor){
+            ProviderFactory.update(proveedor).then(function(response){
+                var _options = {};
+                requestAllProviders();//Vuelvo a cargar los proveedores
+                $scope.closeModal();
+                if(response.data == 'success'){
+                    _options = {
+                        text:'Proveedor Actualizado Exitosamente!',
+                        title:'Exito!',
+                        type:'success',
+                        confirmButtonColor:'#DD6B55'
+                    };
+                }else{
+                    _options = {
+                        text:'Ocurrió un error al intentar crear el Proveedor',
+                        title:'Error!',
+                        type:'error',
+                        confirmButtonColor:'#DD6B55'
+                    };
+                }
+                AgCore.successSweetAlert({options:_options});
             });
         }
 

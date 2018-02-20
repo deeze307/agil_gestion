@@ -37,7 +37,7 @@
                                                 <td>@{{p.direccion}}</td>
                                                 <td>@{{p.localidad}}</td>
                                                 <td>@{{p.telefono}}</td>
-                                                <td>@{{p.categoria}}</td>
+                                                <td>@{{p.nombre_categoria}}</td>
                                                 <td>
                                                     <button type="button" class="btn btn-info btn-outline btn-circle btn-lg img-responsive model-img m-r-5" alt="alert" ng-click="eliminarProveedor(p)"><i class="ti-trash"></i></button>
                                                     <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5" ng-click="btnClick('{{url('/proveedores/prompt')}}','Editar Proveedor','info',p,false)"><i class="ti-pencil-alt"></i></button>
