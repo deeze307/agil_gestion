@@ -1,12 +1,12 @@
 # Agil Gestión
 
 ## Descripción
-Agil Gestión es un sistema de Control de Facturación y Stock de Productos. El sistema le permitirá gestionar su comercio desde su oficina o desde su casa a cualquier hora.
+Agil Gestión es un sistema de Control de Facturación y Stock de Productos. El sistema le permitirá gestionar su comercio desde su oficina o desde su casa en cualquier momento del día y cualquier día de la semana.<br>
 Administre sus empleados, proveedores y su stock de productos donde y cuando quiera.
 
 ## Características
 
-|  | Standard | Gold | Black
+|  | Standard | Gold | Platinum
 |----------|----------|----------|----------|
 |**Sesion de usuario con llave de pago**|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|
 |**Control de Stock con Ubicaciones**|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|<p align="center">:white_check_mark:</p>|
@@ -22,16 +22,16 @@ Administre sus empleados, proveedores y su stock de productos donde y cuando qui
 ## Derecho de llave
 Por única vez se abonará una suma de dinero dependiendo del paquete contratado para obtener ingreso a la plataforma.
 
-* Paquete Standard: _$1800_
-* Paquete Gold: _$2300_
-* Paquete Black: _$2800_
+* Paquete Standard: _$2000_
+* Paquete Gold: _$2500_
+* Paquete Black: _$3000_
 
 Esta suma puede abonarse en efectivo o con tarjetas Visa, Master o American Express hasta 3 pagos sin interés.
 
 ---
 ## Mantenimiento
 
-Mensualmente, se deberán abonar _$500_ por costos de mantenimiento de la cuenta.
+Mensualmente, se deberán abonar _$700_ por costos de mantenimiento de la cuenta.
 Estos costos de mantenimiento incluyen:
 
 * Soporte Técnico
